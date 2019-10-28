@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>注册界面</title>
+    <style type="text/css">
+       .zhuce{
+
+        text-align: center;
+      }
+      .img3{
+              height: 700px;
+              width: 1300px;
+      }
+      .ID  {
+             font-family: 微软雅黑;
+             font-size: 20px;
+             width: 300px;
+             height: 60px;
+             opacity:0.75;
+            }
+      a{
+           font-family: 微软雅黑;
+           font-size: 15px;
+           color: #888888;
+           /*opacity:0.75;*/
+      }
+      .zhucezhanghao{
+           font-family: 微软雅黑;
+           font-size: 20px;
+           width: 150px;
+           height: 50px;
+      }
+    </style>
+   <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js" type="text/javascript" charset="utf-8">
+
+   </script>
+   <script type="text/javascript">
+        function register(){
+            var name1=document.getElementById('username').value;
+            var psw1=document.getElementById('userpsw').value;
+            var name2=document.getElementById('student_num').value;
+            var psw2=document.getElementById('student_psw').value;
+            var data={
+                "username":name1,
+                "password":psw1,
+                "student_number":name2,
+                "student_password":psw2
+            }
+            $.ajax({
+                url:'http://api.revth.com/auth/register2',
+                type:'POST',
+                data:JSON.stringify(data),
+                headers:{
+                    "Content-Type":'application/json'
+                },
+
+                success:function(data){
+                    alert("注册成功，登陆游戏开始对局吧~");
+                },
+                error:function(data){
+                    alert("注册失败，请重试");
+                }
+            });
+        }
+        </script>
+</head>
+<body>
+      <div class="zhuce">
+        <img  src="背景图1.png" class="img3">
+        <img  src="十三水图标.png" height="350px" width="350px" style="position:absolute;left:300px;top:-60px;">
+
+      </div>
+
+      <div>
+         <input class="ID"type="text"  id="username" placeholder="                输入用户名" style="position:absolute; left:650px; top:240px;border-radius:10px; border: 0.5px ">
+         <input class="ID"type="password"  id="userpsw" placeholder="                输入密码" style="position:absolute; left:650px; top:320px;border-radius:10px; border: 0.5px ">
+         <input class="ID"type="text"  id="student_num" placeholder="            输入教务处学号" style="position:absolute; left:650px; top:400px;border-radius:10px; border: 0.5px ">
+         <input class="ID"type="password"  id="student_psw" placeholder="            输入教务处密码" style="position:absolute; left:650px; top:480px;border-radius:10px; border: 0.5px ">
+
+
+      </div>
+      <div class="yonghu">
+         <img src="用户图标.png" height=50px width=50px style="position:absolute;left:600px;top:246px;">
+         <img src="钥匙图标.png" height=35px width=35px style="position:absolute;left:600px;top:323px; opacity:0.75;">
+      </div>
+      <div>
+        <input id="zhuce" class="zhucezhanghao" type="button" onclick="register()" style="position:absolute; left:700px; top:600px;border-radius:10px;background-color:#ffffff" value="注册账号"  />
+      </div>
+      <div>
+         <a href="开始界面.html">
+            <img src="返回图标.png" height=50px width=50px style="position:absolute;left:330px;top:640px;">
+         </a>
+      </div>
+</body>
+</html>

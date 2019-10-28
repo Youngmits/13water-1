@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>对战界面</title>
+    <style type="text/css">
+      .duizhan{
+
+        text-align: center;
+      }
+      .img6{
+              height: 700px;
+              width: 1300px;
+      }
+       .tishi{
+        border: solid black;
+        border-width:0.5px;
+        width: 160px;
+        height: 40px;
+        position: fixed;
+        left: 1200px;
+        top: 600px;
+        font-size: 26px;
+        font-family: 微软雅黑;
+        /*text-align: center;*/
+        border-radius:10px
+      }
+      .chupai{
+              font-family: 微软雅黑;
+              font-size:20px;
+              width: 90px;
+              height: 40px;
+              border: 0.5px;
+              text-shadow:1px 1px 1px black;
+      }
+
+      .puke{
+          height:120px;
+          width: 90px;
+      }
+
+     </style>
+   <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js" type="text/javascript" charset="utf-8">
+
+   </script>
+   <script type="text/javascript">
+
+          function makecard()
+          {
+                document.getElementById('card1').style.display="block";
+                document.getElementById('card2').style.display="block";
+                document.getElementById('card3').style.display="block";
+                document.getElementById('card4').style.display="block";
+                document.getElementById('card5').style.display="block";
+                document.getElementById('card6').style.display="block";
+                document.getElementById('card7').style.display="block";
+                document.getElementById('card8').style.display="block";
+                document.getElementById('card9').style.display="block";
+                document.getElementById('card10').style.display="block";
+                document.getElementById('card11').style.display="block";
+                document.getElementById('card12').style.display="block";
+                document.getElementById('card13').style.display="block";
+          }
+   </script>
+
+
+
+</head>
+<body>
+   <div class="duizhan">
+      <img  src="背景图2.png" class="img6">
+      <img  src="十三水图标.png" height="350" width="350" style="position:absolute;left:300px;top:-60px;">
+   </div>
+
+   <div>
+     <a class="tishi" style="position:absolute;left: 1400px;top: 50px">
+        房间号:
+     </a>
+   </div>
+
+   <div >
+     <input id="xuanzejiemian"class="chupai"  type="button" onclick="makecard()" style="position:absolute; left:950px; top:500px;border-radius:7px;border-color: black;background-color: #cccccc" value="出牌">
+   </div>
+
+
+   <div >
+        <img class="puke" src="A方块.jpg" style="position: absolute;left:410px;top: 550px">
+        <img class="puke" src="2方块.jpg" style="position: absolute;left:500px;top: 550px">
+        <img class="puke" src="3梅花.jpg" style="position: absolute;left:590px;top: 550px">
+        <img class="puke" src="8黑桃.jpg" style="position: absolute;left:680px;top: 550px">
+        <img class="puke" src="10红心.jpeg" style="position: absolute;left:770px;top: 550px">
+        <img class="puke" src="A梅花.jpg" style="position: absolute;left:860px;top: 550px">
+        <img class="puke" src="K红心.jpeg" style="position: absolute;left:950px;top: 550px">
+        <img class="puke" src="4黑桃.jpg" style="position: absolute;left:1040px;top: 550px">
+        <img class="puke" src="Q梅花.jpg" style="position: absolute;left:1130px;top: 550px">
+        <img class="puke" src="5方块.jpg" style="position: absolute;left:1220px;top: 550px">
+        <img class="puke" src="7黑桃.jpg" style="position: absolute;left:1310px;top: 550px">
+        <img class="puke" src="2梅花.jpg" style="position: absolute;left:1400px;top: 550px">
+        <img class="puke" src="6方块.jpg" style="position: absolute;left:1490px;top: 550px">
+   </div>
+<div>
+   <div>
+        <img class="puke" id="card1" src="3梅花.jpg" style="display:none;position: absolute; left:860px; top:80px">
+        <img class="puke" id="card2" src="2方块.jpg" style="display:none;position: absolute;left:950px;top:80px">
+        <img class="puke" id="card3" src="2梅花.jpg" style="display:none;position: absolute;left:1040px;top:80px">
+   </div>
+
+   <div>
+       <img class="puke" id="card4" src="A方块.jpg" style="display:none;position: absolute;left:770px;top: 220px">
+       <img class="puke" id="card5" src="K红心.jpeg" style="display:none;position: absolute;left:860px;top: 220px">
+       <img class="puke" id="card6" src="K红心.jpeg" style="display:none;position: absolute;left:950px;top: 220px">
+       <img class="puke" id="card7" src="Q梅花.jpg" style="display:none;position: absolute;left:1040px;top: 220px">
+       <img class="puke" id="card8" src="10红心.jpeg" style="display:none;position: absolute;left:1130px;top: 220px">
+   </div>
+
+   <div>
+       <img class="puke" id="card9" src="4黑桃.jpg" style="display:none;position: absolute;left:770px;top:360px">
+       <img class="puke" id="card10" src="5方块.jpg" style="display:none;position: absolute;left:860px;top: 360px">
+       <img class="puke" id="card11" src="6方块.jpg" style="display:none;position: absolute;left:950px;top: 360px">
+       <img class="puke" id="card12" src="7黑桃.jpg" style="display:none;position: absolute;left:1040px;top: 360px">
+       <img class="puke" id="card13" src="8黑桃.jpg" style="display:none;position: absolute;left:1130px;top: 360px">
+   </div>
+</div>
+   <div>
+         <a href="选择界面.html">
+            <img src="返回图标.png" height=50px width=50px style="position:absolute;left:330px;top:640px;">
+         </a>
+   </div>
+</body>
+</html>

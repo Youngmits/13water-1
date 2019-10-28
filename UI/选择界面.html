@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>选择界面</title>
+    <style type="text/css">
+      .xuanze{
+
+        text-align: center;
+      }
+      .img5{
+              height: 700px;
+              width: 1300px;
+      }
+      .bt{
+              font-family: 微软雅黑;
+              font-size:20px;
+              width: 227px;
+              height: 65px;
+              border: 0.5px;
+              text-shadow:1px 1px 1px black;
+      }
+    </style>
+   <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js" type="text/javascript" charset="utf-8">
+   </script>
+   <script type="text/javascript">
+        function startgame(){
+            var naid = localStorage.getItem("token");
+            $.ajax({
+                url:'http://api.revth.com/game/open',
+                type:'POST',
+                headers:{
+                    "X-Auth-Token":naid
+                },
+                success:function(data){
+                    window.location.href='对战界面.html';
+                    var op=data["data"]["card"]
+                    alert(op)
+                },
+                error:function(data){
+                    alert("开启战局异常，请重试");
+                }
+            });
+        }
+        </script>
+
+<!--         <script type="text/javascript">-->
+<!--        function history(){-->
+<!--            var naid = localStorage.getItem("token");-->
+<!--            $.ajax({-->
+<!--                url:'http://api.revth.com/history',-->
+<!--                type:'POST',-->
+<!--                headers:{-->
+<!--                    "X-Auth-Token":naid-->
+<!--                },-->
+<!--                success:function(data){-->
+<!--                    window.location.href='对战界面.html';-->
+<!--                    var op=data.data.card-->
+<!--                    alert(op)-->
+<!--                },-->
+<!--                error:function(data){-->
+<!--                    alert("开启战局异常，请重试");-->
+<!--                }-->
+<!--            });-->
+<!--        }-->
+<!--        </script>-->
+
+</head>
+<body>
+   <div class="xuanze">
+      <img  src="背景图1.png" class="img5">
+      <img  src="十三水图标.png" height="350" width="350" style="position:absolute;left:300px;top:-60px;">
+   </div>
+
+   <div >
+      <span >
+
+      </span>
+      <input id="xuanzejiemian1" class="bt" type="button" onclick="startgame()" style="position:absolute; left:500px; top:220px;border-radius:7px;border-color: black;background-color:#ffffff " value="快速匹配"  />
+      <input id="xuanzejiemian2" class="bt" type="button" onclick="window.location.href='排行榜.html'" style="position:absolute; left:500px; top:300px;border-radius:7px;background-color: #ffffff" value="排行榜"  />
+      <input id="xuanzejiemian3" class="bt" type="button" onclick="window.location.href='历史战绩.html'" style="position:absolute; left:500px; top:380px;border-radius:7px;background-color: #ffffff" value="历史战绩"  />
+      <input id="xuanzejiemian4" class="bt" type="button" onclick="window.location.href='对局详情.html'" style="position:absolute; left:500px; top:460px;border-radius:7px;background-color: #ffffff" value="对局详情"  />
+      <input id="xuanzejiemian5" class="bt" type="button" onclick="window.close()" style="position:absolute; left:500px; top:540px;border-radius:7px;background-color: #ffffff" value="退出游戏"  />
+
+  </div>
+
+
+   <div>
+      <a href="登陆界面.html">
+        <img src="返回图标.png" height=50px width=50px style="position:absolute;left:330px;top:640px;">
+      </a>
+   </div>
+</body>
+</html>
