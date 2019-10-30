@@ -1,6 +1,7 @@
 1.徽章
 ====
-
+![](https://img.shields.io/badge/language-html/css/javascript/c++-orange.svg)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/f07d36274fbf4dfb9e2d556e086fb61c)](https://www.codacy.com/manual/Ephmeral/13water?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Ephmeral/13water&amp;utm_campaign=Badge_Grade)
 2.运行环境
 ====
 不需要特殊的运行环境，下载所有素材，打开游览器就能运行
